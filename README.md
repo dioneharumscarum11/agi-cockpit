@@ -70,4 +70,4 @@ Use [GitHub Issues](https://github.com/tempi-tech/agi-cockpit/issues) for bug re
 
 ## About this repository
 
-Everything here is generated from the private [`tempi-tech/AGICockpit`](https://github.com/tempi-tech/AGICockpit) repository. Do not edit generated files directly.
+Everything here is generated from the private `tempi-tech/AGICockpit` repository. Do not edit generated files directly.
