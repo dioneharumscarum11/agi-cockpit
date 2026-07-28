@@ -6,7 +6,7 @@ English is the primary language for these generated release notes. Download the 
 
 ## v4.40.0 — 2026-07-29
 
-**Type:** minor · **Platforms:** macOS
+**Type:** minor · **Platforms:** macOS, Linux
 
 - Improved the reliability of copying text from chat details.
 - Added per-Autorun model, reasoning effort, service tier, system prompt, approval mode, and account settings that can be reviewed and edited from Desktop, PWA, and CLI.
