@@ -4,7 +4,7 @@
 
 Learn how Autorun starts a new task from a one-time, interval, or cron schedule and keeps the result as a regular Cockpit task.
 
-> Verified with AGI Cockpit 4.39.0 on 2026-07-28. [View the official documentation](https://agi-labo.com/en/tools/cockpit/docs/autorun)
+> Verified with AGI Cockpit 4.40.0 on 2026-07-29. [View the official documentation](https://agi-labo.com/en/tools/cockpit/docs/autorun)
 
 Autorun starts a new task automatically at a specified time, interval, or cron schedule. It does not coordinate several agents inside one run. It is an independent way to start the same kind of work when it is needed.
 
@@ -30,11 +30,11 @@ In the cron weekday field, `0` means Sunday. For example, `0 9 * * 1-5` runs at 
 2. Select **New Autorun**.
 3. Enter a name and the instruction to send when the task starts.
 4. Choose the working directory. When running as the Master Agent, Cockpit uses the Master's working location.
-5. Select an agent and, when shown, review its UI mode, launch command, and Claude or Codex account.
+5. Select an agent and, when shown, review its UI mode, account, model, reasoning effort, service tier, system prompt, and approval mode.
 6. Choose **Once**, **Interval**, or **Cron** and configure the timing.
 7. Save the Autorun and confirm that the list shows its next run time.
 
-The approval mode and Native UI model settings used for the new task inherit the current defaults when the Autorun is created. The Autorun dialog does not have a separate model picker.
+Autorun keeps the runtime settings from the time it is saved as a snapshot. Changing global settings later does not silently change an existing Autorun's model, reasoning effort, service tier, system prompt, approval mode, account, or UI mode. If a saved model or account becomes unavailable, Cockpit does not substitute another setting. It disables that Autorun and marks it as needing attention.
 
 ## Review a run
 
@@ -65,12 +65,19 @@ cockpit autorun create \
   --name "Weekday progress review" \
   --instruction "Review the unfinished work in this project and summarize it in priority order." \
   --directory /path/to/project \
+  --agent-type codex \
+  --ui-mode visual \
+  --model gpt-5.4 \
+  --effort high \
+  --service-tier fast \
+  --approval-mode accept-edits \
   --type cron \
   --expression "0 9 * * 1-5"
 ```
 
 ```bash
 cockpit autorun list
+cockpit autorun get <id>
 cockpit autorun run <id>
 cockpit autorun toggle <id>
 ```

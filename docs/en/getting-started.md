@@ -4,7 +4,7 @@
 
 Install AGI Cockpit, choose a working directory and agent, review the result of your first task, and mark the task complete.
 
-> Verified with AGI Cockpit 4.39.0 on 2026-07-28. [View the official documentation](https://agi-labo.com/en/tools/cockpit/docs/getting-started)
+> Verified with AGI Cockpit 4.40.0 on 2026-07-29. [View the official documentation](https://agi-labo.com/en/tools/cockpit/docs/getting-started)
 
 By the end of this guide, you will be able to open AGI Cockpit, run your first task, review its result, and complete the task.
 
@@ -21,6 +21,10 @@ Open the [AGI Cockpit download page](https://agi-labo.com/en/tools/cockpit) and 
 On Windows, install AGI Cockpit from Microsoft Store. On macOS, open the `.dmg` and move AGI Cockpit to Applications. On Linux, use the distributed AppImage or `.deb` package.
 
 After launch, choose guest mode if you want to continue without an account. Sign in as an AGI Labo member if you need Autorun or remote access from another device.
+
+AGI Cockpit stores credentials and API keys in encrypted operating-system storage such as Keychain or a keyring. If encrypted storage is unavailable, Cockpit does not fall back to plaintext. It rejects the save and shows recovery guidance. Enable the operating-system Keychain or keyring, then sign in again.
+
+Remote access defaults to Tailscale-only mode. When Tailscale HTTPS is enabled but its certificate is unavailable, Cockpit does not silently downgrade to HTTP and does not start the connection. Local Wi-Fi mode is unencrypted, so Cockpit enables it only after an explicit confirmation and keeps a warning visible while it is active. Do not use local Wi-Fi mode on a public network.
 
 ## 2. Prepare an agent
 

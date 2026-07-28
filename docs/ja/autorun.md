@@ -4,7 +4,7 @@
 
 Autorunが一度、一定間隔、cronのスケジュールに基づいて新しいタスクを起動し、その結果を通常のタスクとして残す仕組みを説明します。
 
-> AGI Cockpit 4.39.0で2026-07-28に確認済み。 [公式ドキュメントを表示](https://agi-labo.com/tools/cockpit/docs/autorun)
+> AGI Cockpit 4.40.0で2026-07-29に確認済み。 [公式ドキュメントを表示](https://agi-labo.com/tools/cockpit/docs/autorun)
 
 Autorunは、指定した時刻、一定間隔、cron式に基づいて、新しいタスクを自動起動する仕組みです。複数エージェントを連携させる機能ではなく、同じ条件の仕事を必要なタイミングで開始するための独立した機能です。
 
@@ -30,11 +30,11 @@ cronの曜日は`0`が日曜日です。例として、平日の午前9時は`0 
 2. 「新規作成」を選びます。
 3. 名前と、起動時に送る指示を入力します。
 4. 作業するディレクトリを選びます。Master Agentとして実行する場合は、Masterの作業場所が使われます。
-5. エージェントを選び、表示される場合はUIモード、起動コマンド、ClaudeまたはCodexのアカウントを確認します。
+5. エージェントを選び、表示される場合はUIモード、アカウント、モデル、推論レベル、service tier、system prompt、承認モードを確認します。
 6. 一度のみ、間隔、Cronから実行タイミングを選びます。
 7. 保存後、一覧に次回実行時刻が表示されることを確認します。
 
-タスク作成時の承認モードとネイティブUIのモデル設定は、Autorun作成時の現在の既定設定を引き継ぎます。Autorun画面に独立したモデル選択欄はありません。
+Autorunは保存時のランタイム設定をスナップショットとして保持します。後からグローバル設定を変更しても、既存Autorunのモデル、推論レベル、service tier、system prompt、承認モード、アカウント、UIモードは自動で変わりません。保存済みのモデルやアカウントを利用できなくなった場合、Cockpitは別の設定へ無言で切り替えず、そのAutorunを無効にして「要確認」を表示します。
 
 ## 実行結果を確認する
 
@@ -65,12 +65,19 @@ cockpit autorun create \
   --name "平日の進捗確認" \
   --instruction "このプロジェクトの未完了タスクを確認し、優先順に要約してください。" \
   --directory /path/to/project \
+  --agent-type codex \
+  --ui-mode visual \
+  --model gpt-5.4 \
+  --effort high \
+  --service-tier fast \
+  --approval-mode accept-edits \
   --type cron \
   --expression "0 9 * * 1-5"
 ```
 
 ```bash
 cockpit autorun list
+cockpit autorun get <id>
 cockpit autorun run <id>
 cockpit autorun toggle <id>
 ```

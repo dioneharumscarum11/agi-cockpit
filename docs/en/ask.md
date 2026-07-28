@@ -4,7 +4,7 @@
 
 Learn how Ask safely hands a confirmation or decision from an AI agent to a person and resumes the same task after the answer.
 
-> Verified with AGI Cockpit 4.39.0 on 2026-07-28. [View the official documentation](https://agi-labo.com/en/tools/cockpit/docs/ask)
+> Verified with AGI Cockpit 4.40.0 on 2026-07-29. [View the official documentation](https://agi-labo.com/en/tools/cockpit/docs/ask)
 
 Ask lets an AI agent pause its work and hand a confirmation or decision to a person. Cockpit returns the answer to the original task as a structured event, then resumes that same task from where it stopped.
 
@@ -39,7 +39,7 @@ Ask can combine:
 - several related questions
 - an outcome or trade-off description for each choice
 - image, audio, or video attached to the question
-- images attached to an answer
+- images, text, source code, JSON, CSV, PDFs, audio, video, or office documents attached to an answer
 
 Free-form input is available by default even when choices are provided. Write the question so it can stand on its own: identify the subject, the current state, and the result of each choice.
 
@@ -47,7 +47,7 @@ Free-form input is available by default even when choices are provided. Write th
 
 1. The agent creates an Ask.
 2. Cockpit saves the question and displays it in Desktop or the PWA.
-3. A person answers with a choice, text, and optional image attachments.
+3. A person answers with a choice, text, and optional supported file attachments.
 4. Cockpit delivers a `cockpit.ask.resolved` event to the original task.
 5. The agent receives the answer and continues the same work.
 
@@ -60,6 +60,9 @@ Dismissing an Ask without answering removes the Ask, but it does not resume the 
 - Ask is available to resumable AI-agent tasks, not Terminal tasks.
 - After creating an Ask, the agent waits and does not continue work that depends on the answer.
 - A question can attach up to eight files, with a limit of 512 MB per file and 1 GB in total.
+- Answer attachments have the same eight-file, 512 MB per-file, and 1 GB total limits. A JSON file is limited to 25 MB.
+- Archives and executable formats are rejected. Cockpit validates the extension, MIME type, actual size, and content, and stores the upload under a randomized name rather than its original file name.
+- Cockpit does not expand attachment contents into the prompt automatically. The agent receives a local path and metadata for the name, MIME type, and size.
 
 ## Create an Ask from the CLI
 

@@ -4,6 +4,49 @@
 
 English is the primary language for these generated release notes. Download the latest version from the [official AGI Cockpit page](https://agi-labo.com/en/tools/cockpit).
 
+## v4.40.0 — 2026-07-29
+
+**Type:** minor · **Platforms:** macOS
+
+- Improved the reliability of copying text from chat details.
+- Added per-Autorun model, reasoning effort, service tier, system prompt, approval mode, and account settings that can be reviewed and edited from Desktop, PWA, and CLI.
+- Added secure task attachments for text, source code, JSON, CSV, PDFs, audio, video, and office documents.
+- Added secure Ask answer attachments for text, source code, JSON, CSV, PDFs, audio, video, and office documents.
+- Added quoting of selected chat text into the composer.
+- Integrated Terminal as an independent workspace in the right side panel.
+- Added source-task labels and navigation to inter-task messages.
+- Made the history dashboard available in guest mode.
+- Unified agent-specific settings across Desktop, PWA, CLI, and Autorun, with unsupported combinations identified before creation.
+- Fixed Codex CLI detection and installation sometimes failing on Windows.
+- Improved the update screen with localized release notes and download destinations.
+- Added explicit confirmation and a persistent warning for unencrypted local Wi-Fi connections.
+- Changed HTTPS startup to fail instead of silently downgrading to HTTP when a certificate is unavailable.
+- Added AGI Labo membership verification for Autorun across Desktop, PWA, CLI, API, and scheduled execution.
+- Fixed chat text selection being lost during task updates.
+- Fixed the HTML Surface switcher leaving the side-panel header.
+
+<details>
+<summary>日本語のリリースノート</summary>
+
+- チャット詳細のテキストコピーを安定化
+- Autorunごとにモデル・推論レベル・service tier・system prompt・承認モード・アカウントを固定し、Desktop・PWA・CLIから確認・編集できるように対応
+- タスクへテキスト・ソースコード・JSON・CSV・PDF・音声・動画・Office文書を安全に添付できるように対応
+- Askの回答へテキスト・ソースコード・JSON・CSV・PDF・音声・動画・Office文書を安全に添付できるように対応
+- 選択したチャット本文を引用として入力欄へ追加できるように対応
+- ターミナルを右サイドパネルの独立したワークスペースへ統合
+- タスク間メッセージに送信元タスクを表示し、送信元へ移動できるように対応
+- 履歴ダッシュボードをゲスト利用でも開けるように変更
+- エージェントごとの対応設定をDesktop・PWA・CLI・Autorunで統一し、非対応の組み合わせを作成前に案内するよう改善
+- WindowsでCodex CLIの検出とインストールが失敗する場合がある問題を修正
+- アップデート画面で言語に合ったリリースノートとダウンロード先を表示するように改善
+- ローカルWi-Fiの非暗号化接続に明示確認と常時警告を追加
+- HTTPS証明書を利用できない場合にHTTPへ自動降格しないように変更
+- Autorunの会員資格をDesktop・PWA・CLI・API・スケジュール実行時に確認するように変更
+- タスク更新中もチャット本文の選択範囲を維持するように修正
+- HTML Surfaceの切り替えをサイドパネルのヘッダーに維持するように修正
+
+</details>
+
 ## v4.39.0 — 2026-07-27
 
 **Type:** minor · **Platforms:** macOS, Linux

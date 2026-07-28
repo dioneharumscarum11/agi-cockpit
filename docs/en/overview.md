@@ -4,7 +4,7 @@
 
 Learn where AGI Cockpit runs AI agents and how the task list and task details connect human decisions with result review.
 
-> Verified with AGI Cockpit 4.39.0 on 2026-07-28. [View the official documentation](https://agi-labo.com/en/tools/cockpit/docs)
+> Verified with AGI Cockpit 4.40.0 on 2026-07-29. [View the official documentation](https://agi-labo.com/en/tools/cockpit/docs)
 
 AGI Cockpit is a desktop app for handing work to multiple AI agents and supervising their progress, requests for decisions, and results in one place. Creating a task, reviewing its result, sending follow-up instructions, and completing it all stay within the same unit of work.
 
@@ -40,8 +40,8 @@ Remote access through the PWA and Autorun require an AGI Labo membership. You ca
 
 | Access | Scope covered by these docs |
 | --- | --- |
-| Guest mode | Create a task in Desktop, run an agent, and review the result |
-| AGI Labo member | Everything in guest mode, plus Autorun, PWA remote access, and the history dashboard |
+| Guest mode | Create a task in Desktop, run an agent, and review the result and history dashboard |
+| AGI Labo member | Everything in guest mode, plus Autorun and PWA remote access |
 
 A lock on a feature means that feature requires sign-in. Authentication for Claude Code, Codex, or another task agent is managed separately from your AGI Labo sign-in.
 
