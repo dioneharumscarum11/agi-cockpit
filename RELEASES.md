@@ -13,10 +13,10 @@ English is the primary language for these generated release notes. Download the 
 - Added secure task attachments for text, source code, JSON, CSV, PDFs, audio, video, and office documents.
 - Added secure Ask answer attachments for text, source code, JSON, CSV, PDFs, audio, video, and office documents.
 - Added quoting of selected chat text into the composer.
-- Integrated Terminal as an independent workspace in the right side panel.
+- Improved Terminal by integrating it as an independent workspace in the right side panel.
 - Added source-task labels and navigation to inter-task messages.
-- Made the history dashboard available in guest mode.
-- Unified agent-specific settings across Desktop, PWA, CLI, and Autorun, with unsupported combinations identified before creation.
+- Changed the history dashboard to be available in guest mode.
+- Improved agent-specific settings by unifying them across Desktop, PWA, CLI, and Autorun and identifying unsupported combinations before creation.
 - Fixed Codex CLI detection and installation sometimes failing on Windows.
 - Improved the update screen with localized release notes and download destinations.
 - Added explicit confirmation and a persistent warning for unencrypted local Wi-Fi connections.
