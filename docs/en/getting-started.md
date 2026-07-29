@@ -4,7 +4,7 @@
 
 Install AGI Cockpit, choose a working directory and agent, review the result of your first task, and mark the task complete.
 
-> Verified with AGI Cockpit 4.40.0 on 2026-07-29. [View the official documentation](https://agi-labo.com/en/tools/cockpit/docs/getting-started)
+> Verified with AGI Cockpit 4.41.0 on 2026-07-29. [View the official documentation](https://agi-labo.com/en/tools/cockpit/docs/getting-started)
 
 By the end of this guide, you will be able to open AGI Cockpit, run your first task, review its result, and complete the task.
 
@@ -20,7 +20,7 @@ Open the [AGI Cockpit download page](https://agi-labo.com/en/tools/cockpit) and 
 
 On Windows, install AGI Cockpit from Microsoft Store. On macOS, open the `.dmg` and move AGI Cockpit to Applications. On Linux, use the distributed AppImage or `.deb` package.
 
-After launch, choose guest mode if you want to continue without an account. Sign in as an AGI Labo member if you need Autorun or remote access from another device.
+On a first run with no existing tasks, Cockpit opens a setup flow. It introduces the app, checks the supported task-agent CLIs, configures the Cockpit integration, then offers AGI Labo sign-in. One available agent is enough to continue. Choose **Start without signing in** at the final step if you want to use guest mode; sign in as an AGI Labo member if you need Autorun or remote access from another device. You can revisit the flow later from **First-run setup** in Settings.
 
 AGI Cockpit stores credentials and API keys in encrypted operating-system storage such as Keychain or a keyring. If encrypted storage is unavailable, Cockpit does not fall back to plaintext. It rejects the save and shows recovery guidance. Enable the operating-system Keychain or keyring, then sign in again.
 
@@ -28,9 +28,11 @@ Remote access defaults to Tailscale-only mode. When Tailscale HTTPS is enabled b
 
 ## 2. Prepare an agent
 
-The new-task screen can start Claude Code, Codex CLI, Grok Build, Antigravity CLI, Cursor CLI, Cockpit Agent, or Terminal. If Cockpit cannot find an agent, the screen shows **Install** or **Open Settings**.
+The setup flow checks Claude Code, Codex CLI, Antigravity CLI, Cursor CLI, and Grok Build. It shows whether each CLI is installed and, for Claude Code, Codex CLI, and Grok Build, whether sign-in is ready. If Cockpit cannot find an agent, select **Install**. The new-task screen also supports Cockpit Agent and Terminal.
 
-If the screen shows **Install**, use it to install the corresponding CLI. If it shows **Open Settings**, confirm the launch command in Settings. Return to the new-task screen after installation; the agent is ready when it becomes selectable.
+If the new-task screen later shows **Install**, use it to install the corresponding CLI. If it shows **Open Settings**, confirm the launch command in Settings. Return to the new-task screen after installation; the agent is ready when it becomes selectable.
+
+The integration step automatically installs or refreshes the `cockpit` skill for detected Claude Code, Codex CLI, Antigravity CLI, Cursor CLI, and Grok Build installations. It also installs the `cockpit` command and adds its directory to your shell configuration on macOS and Linux or to your user `PATH` on Windows. This writes the generated skill into each detected agent's user-level skill directory and updates the applicable user-level path configuration. HTML Mode is optional and remains a separate installation. Cockpit refreshes the core skill and command on later app starts; open **View skill integration** in Settings to review their status after adding another agent.
 
 When you use Claude Code, Codex, or Grok Build in Native UI, you can start before authenticating. Task details then shows sign-in guidance, and Cockpit retries the first instruction in the same task after authentication succeeds. This guidance and automatic retry do not apply to Terminal UI or the Terminal agent. In those modes, complete the CLI's sign-in flow inside the terminal, then resume or recreate the task.
 
@@ -46,6 +48,8 @@ An AI agent's subscription and authentication are separate from your AGI Labo si
 6. Create the task.
 
 The settings shown depend on the agent and UI mode. Desktop, PWA, CLI, and Autorun use the same capability data. An unsupported combination of model, reasoning effort, service tier, system prompt, account, or approval mode is hidden or rejected with an explicit error before creation.
+
+Cursor CLI supports both **Native UI** and **Terminal**. In Native UI, Cockpit can show Cursor's available models and approval mode; reasoning-effort and service-tier controls are not available for Cursor.
 
 A read-only request is a safe first check.
 
@@ -82,7 +86,7 @@ When Cockpit requires a newer version before continuing, the screen shows releas
 
 ## Create a task from an AI agent
 
-If the `cockpit` command is installed from Cockpit settings, an AI agent can create the same kind of task:
+After the Cockpit integration is configured, a supported AI agent can use the `cockpit` command to create the same kind of task:
 
 ```bash
 cockpit task create \

@@ -4,7 +4,7 @@
 
 Learn how Ask safely hands a confirmation or decision from an AI agent to a person and resumes the same task after the answer.
 
-> Verified with AGI Cockpit 4.40.0 on 2026-07-29. [View the official documentation](https://agi-labo.com/en/tools/cockpit/docs/ask)
+> Verified with AGI Cockpit 4.41.0 on 2026-07-29. [View the official documentation](https://agi-labo.com/en/tools/cockpit/docs/ask)
 
 Ask lets an AI agent pause its work and hand a confirmation or decision to a person. Cockpit returns the answer to the original task as a structured event, then resumes that same task from where it stopped.
 
@@ -38,10 +38,13 @@ Ask can combine:
 - free-form input
 - several related questions
 - an outcome or trade-off description for each choice
+- clickable HTTP or HTTPS URLs in the Ask summary or an individual question
 - image, audio, or video attached to the question
 - images, text, source code, JSON, CSV, PDFs, audio, video, or office documents attached to an answer
 
 Free-form input is available by default even when choices are provided. Write the question so it can stand on its own: identify the subject, the current state, and the result of each choice.
+
+Desktop opens a clicked Ask URL in the system browser without navigating the Ask window. The PWA opens it in a new browser tab. Desktop accepts only `http` and `https` links from the Ask surface; other URL schemes are not opened.
 
 ## What happens before and after an answer
 

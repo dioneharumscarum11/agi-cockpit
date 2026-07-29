@@ -4,7 +4,7 @@
 
 Learn how Autorun starts a new task from a one-time, interval, or cron schedule and keeps the result as a regular Cockpit task.
 
-> Verified with AGI Cockpit 4.40.0 on 2026-07-29. [View the official documentation](https://agi-labo.com/en/tools/cockpit/docs/autorun)
+> Verified with AGI Cockpit 4.41.0 on 2026-07-29. [View the official documentation](https://agi-labo.com/en/tools/cockpit/docs/autorun)
 
 Autorun starts a new task automatically at a specified time, interval, or cron schedule. It does not coordinate several agents inside one run. It is an independent way to start the same kind of work when it is needed.
 
@@ -37,6 +37,8 @@ In the cron weekday field, `0` means Sunday. For example, `0 9 * * 1-5` runs at 
 Autorun keeps the runtime settings from the time it is saved as a snapshot. Changing global settings later does not silently change an existing Autorun's model, reasoning effort, service tier, system prompt, approval mode, account, or UI mode. If a saved model or account becomes unavailable, Cockpit does not substitute another setting. It disables that Autorun and marks it as needing attention.
 
 Desktop and the PWA show only settings supported by the selected agent and UI mode. The CLI and API use the same capability data and reject unsupported combinations with an explicit error before saving.
+
+Cursor Autoruns can use **Native UI** or **Terminal**. Native UI exposes Cursor's available model and approval mode in Desktop, the PWA, and CLI-backed creation. Cursor does not expose reasoning-effort, service-tier, system-prompt, or account-profile settings.
 
 ## Review a run
 
