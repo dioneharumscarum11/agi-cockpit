@@ -6,7 +6,7 @@ English is the primary language for these generated release notes. Download the 
 
 ## v4.41.0 — 2026-07-29
 
-**Type:** minor · **Platforms:** macOS
+**Type:** minor · **Platforms:** macOS, Linux
 
 - Added native UI support for running Cursor.
 - Added first-run onboarding for sign-in, agent setup, and integration configuration.
