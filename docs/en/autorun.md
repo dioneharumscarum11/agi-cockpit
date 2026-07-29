@@ -36,6 +36,8 @@ In the cron weekday field, `0` means Sunday. For example, `0 9 * * 1-5` runs at 
 
 Autorun keeps the runtime settings from the time it is saved as a snapshot. Changing global settings later does not silently change an existing Autorun's model, reasoning effort, service tier, system prompt, approval mode, account, or UI mode. If a saved model or account becomes unavailable, Cockpit does not substitute another setting. It disables that Autorun and marks it as needing attention.
 
+Desktop and the PWA show only settings supported by the selected agent and UI mode. The CLI and API use the same capability data and reject unsupported combinations with an explicit error before saving.
+
 ## Review a run
 
 When Autorun fires, it creates a new task in the same form as any regular task. Select it from the task list, then use task details to review its conversation, confirmation requests, errors, and results. The new task keeps a reference to the Autorun ID that created it.

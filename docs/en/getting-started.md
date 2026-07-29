@@ -45,6 +45,8 @@ An AI agent's subscription and authentication are separate from your AGI Labo si
 5. For this first check, choose **Supervised** approval mode and enter a short request with a clear completion condition.
 6. Create the task.
 
+The settings shown depend on the agent and UI mode. Desktop, PWA, CLI, and Autorun use the same capability data. An unsupported combination of model, reasoning effort, service tier, system prompt, account, or approval mode is hidden or rejected with an explicit error before creation.
+
 A read-only request is a safe first check.
 
 ```text
@@ -61,7 +63,13 @@ After one response finishes, the task moves to **Awaiting confirmation**. This d
 
 When the work is finished, select **Complete** in task details. Completed tasks move out of the active list and do not accept regular follow-up instructions.
 
-## 5. If the task does not start
+## 5. Update AGI Cockpit
+
+Check for a new version from the update notice in the header or **Check for Updates** in Settings. On platforms where Cockpit downloads the update, use the on-screen action to restart and install it when ready. On Linux, the notice opens the download page that matches the current display language.
+
+When Cockpit requires a newer version before continuing, the screen shows release notes and a download destination in the app's current language. Review the Japanese guidance in the Japanese UI or the English guidance in the English UI before updating.
+
+## 6. If the task does not start
 
 | Message or state | What to check |
 | --- | --- |
@@ -89,3 +97,4 @@ If the command omits the directory, Cockpit starts the task in an operating-syst
 - [Task list and task details](https://agi-labo.com/en/tools/cockpit/docs/tasks)
 - [Ask](https://agi-labo.com/en/tools/cockpit/docs/ask)
 - [Autorun](https://agi-labo.com/en/tools/cockpit/docs/autorun)
+- [Release history](https://agi-labo.com/en/tools/cockpit/docs/releases)

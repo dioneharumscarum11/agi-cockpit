@@ -2,9 +2,9 @@
 
 # Task list and task details
 
-Understand the task list, Overview, task details, task states, waiting reasons, follow-up instructions, resume, and completion.
+Understand the task list, Overview, task details, task states, follow-up instructions, quotes, attachments, resume, and completion.
 
-> Verified with AGI Cockpit 4.39.0 on 2026-07-28. [View the official documentation](https://agi-labo.com/en/tools/cockpit/docs/tasks)
+> Verified with AGI Cockpit 4.40.0 on 2026-07-29. [View the official documentation](https://agi-labo.com/en/tools/cockpit/docs/tasks)
 
 The task list is where you choose what to look at next. Task details is where you understand and act on the selected work. Overview searches across tasks, projects, and agents.
 
@@ -49,6 +49,29 @@ The task list can filter by agent and pin a task or project. Switching the selec
 - **Resume**: reconnects an unfinished task whose process stopped, such as after an app restart, to its saved session.
 
 `needsResume` is not a task state. It is additional information indicating that an unfinished task lost its process and requires a resume action.
+
+## Conversation, quotes, and inter-task messages
+
+Selecting text in the chat reveals **Quote selection**. Activating it inserts the selected content into the composer as a Markdown quote. Cockpit preserves the selection while task progress updates.
+
+A message sent by another Cockpit task is labeled **Sent from another task** and shows the source task name or short ID. When the source task still exists in the current list, select its name to navigate to it.
+
+## Attach files
+
+In Desktop and the PWA, the new-task screen and task-details composer can attach images, text, source code, JSON, CSV, PDFs, audio, video, and office documents. When the selected agent supports a format natively, Cockpit sends it as a native attachment. Otherwise, Cockpit supplies its local path and metadata for the name, MIME type, and size. Handling varies by agent, UI mode, and model, so not every combination can interpret every format directly.
+
+Attachments have these limits:
+
+- Up to eight files, 512 MB per file, and 1 GB in total
+- JSON files are limited to 25 MB each
+- Archives and executable formats are not supported
+- Cockpit validates the extension, MIME type, actual size, and content, then stores the upload under a randomized name rather than its original file name
+
+An attachment's name and content are not automatically trusted instructions. State which file the agent should use and what result you expect in the message itself.
+
+## History dashboard
+
+The history dashboard in the header is available in guest mode. Alongside Cockpit activity, it can show local external sessions from Claude Code and Codex CLI and import them as tasks. Autorun and PWA remote access still require an AGI Labo membership.
 
 ## Complete and delete
 
