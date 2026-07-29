@@ -4,6 +4,35 @@
 
 English is the primary language for these generated release notes. Download the latest version from the [official AGI Cockpit page](https://agi-labo.com/en/tools/cockpit).
 
+## v4.41.0 — 2026-07-29
+
+**Type:** minor · **Platforms:** macOS
+
+- Added native UI support for running Cursor.
+- Added first-run onboarding for sign-in, agent setup, and integration configuration.
+- Changed the cockpit skill and cockpit command to be configured automatically for available agents.
+- Improved the in-app browser to preserve its state when switching tasks.
+- Added cookie and localStorage support when importing sign-in sessions from Chrome.
+- Added support for opening links displayed in Ask.
+- Added support for opening folder links in Project Explorer.
+- Added a button in PWA chat to jump to the latest message.
+- Fixed an unnecessary scrollbar appearing while selecting chat text.
+
+<details>
+<summary>日本語のリリースノート</summary>
+
+- CursorをネイティブUIで実行できるように対応
+- 初回起動時にサインイン・エージェント準備・連携設定を案内するオンボーディングを追加
+- cockpitスキルとcockpitコマンドを利用可能なエージェントへ自動設定するように変更
+- アプリ内ブラウザーの状態をタスク切り替え後も維持するように改善
+- Chromeからログインを取り込む際にCookieとlocalStorageへ対応
+- Askに表示されたリンクをクリックして開けるように対応
+- フォルダへのリンクをプロジェクトエクスプローラーで開けるように対応
+- PWAのチャットに最新メッセージへ移動するボタンを追加
+- チャット本文の選択時に不要なスクロールバーが表示される問題を修正
+
+</details>
+
 ## v4.40.0 — 2026-07-29
 
 **Type:** minor · **Platforms:** macOS, Linux
